@@ -10,7 +10,7 @@ export default function NavBar() {
     if (!isLoaded) return <p>Loading... </p>
 
     return (
-        <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+        <nav className="absolut top-0 left-0 w-full bg-white shadow-sm z-50">
             <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
                 <Link href={"/"}>
                     <Image
@@ -20,12 +20,17 @@ export default function NavBar() {
                         height={80}
                         alt="Logo" />
                 </Link>
-                <div className="space-x-6 flex items-center">
+                <div className="space-x-6 flex items-center text-red-900 p-6 font-serif text-2xl font-bold mb-4">
                     <SignedIn>
                         <Link
                             className="text-black-700 hover:text-red-500 transition-colors"
-                            href={"/mealplan"}>
-                            MealPlan!
+                            href={"/products"}>
+                            Products
+                        </Link>
+                        <Link
+                            className="text-black-700 hover:text-red-500 transition-colors"
+                            href={"/discover"}>
+                            Discover
                         </Link>
                         {user?.imageUrl ? (
                             <Link href="/profile">
